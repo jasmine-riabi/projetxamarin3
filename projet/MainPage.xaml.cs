@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using projet.Views;
 using Xamarin.Forms;
 
 namespace projet
@@ -17,7 +18,7 @@ namespace projet
         async void onClickMenu(object sender, EventArgs e)
         {
             // Navigate to the NoteEntryPage, without passing any data.
-            await Application.Current.MainPage.Navigation.PushModalAsync(new CountryList());
+            await Application.Current.MainPage.Navigation.PushModalAsync(new CountriesListPage());
         }
     }
 }
