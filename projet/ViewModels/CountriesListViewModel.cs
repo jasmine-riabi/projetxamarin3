@@ -5,6 +5,7 @@ namespace projet.ViewModels
     {
         public CountriesListViewModel()
         {
+
         }
     }
 }

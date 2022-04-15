@@ -5,6 +5,7 @@ namespace projet.Models
     {
         public Countries()
         {
+
         }
     }
 }
