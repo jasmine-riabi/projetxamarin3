@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="projet.Views.CountriesListPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:projet.Views" x:DataType="views:CountriesListPage"
+            x:Class="projet.Views.CountriesListPage">
 
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
-  <ContentPage Title="Tab 4" />
-  <ContentPage Title="Tab 5" />
-  <ContentPage Title="Tab 6" />
+    <ContentPage Title="Europe" />
+        <ContentPage Title="Amérique" />
+        <ContentPage Title="Afrique" />
+        <ContentPage Title="Asie" />
+        <ContentPage Title="Océanie" />
+        <ContentPage Title="Antartique" />
 
-</TabbedPage>
+
+</TabbedPage> 
+    
+   

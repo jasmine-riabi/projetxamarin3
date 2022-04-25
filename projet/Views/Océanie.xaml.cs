@@ -10,15 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace projet.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CountriesListPage : TabbedPage
+    public partial class Page5 : ContentPage
     {
-
-
-        public CountriesListPage()
+        public Page5()
         {
             InitializeComponent();
         }
-
-
     }
 }
