@@ -1,12 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="projet.Views.Page4" Title="Asie" Icon="icon.png">
+             xmlns:local="clr-namespace:projet"
+             x:Class="projet.Views.Page4"
+             Title="Asie"
+             Icon="icon.png">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Asie"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Margin="20">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="Green"/>
+
+            <CollectionView ItemsSource="{Binding Countries}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Column="1"
+                                   Text="{Binding Name.Common}"
+                                   FontSize="10"
+                                   FontAttributes="Bold"
+                                   VerticalTextAlignment="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="Blue"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

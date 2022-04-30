@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+
 namespace projet.Models
 {
     public class Countries
     {
-        public Countries()
-        {
+        [JsonProperty(PropertyName = "common")]
+        public string Name { get; set; }
 
-        }
+
     }
 }

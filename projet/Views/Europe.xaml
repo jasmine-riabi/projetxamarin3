@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="projet.Views.Page1" Title="Europe" Icon="icon.png">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Europe"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             xmlns:local="clr-namespace:projet"
+             x:Class="projet.Views.Page1"
+             Title="Europe"
+             Icon="icon.png">
+
+     <ListView 
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        ItemsSource="{Binding Countries}"
+        SelectedItem="{Binding CountrySelected, Mode=TwoWay}"
+        HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="20">
+                        <Label Text="{Binding Name.Common}" />       
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+    
+    
 </ContentPage>
