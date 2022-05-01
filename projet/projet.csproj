@@ -31,7 +31,7 @@
     <Compile Update="Views\Europe.xaml.cs">
       <DependentUpon>Europe.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\AmErique.xaml.cs">
+    <Compile Update="Views\Amerique.xaml.cs">
       <DependentUpon>Amerique.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\Afrique.xaml.cs">
