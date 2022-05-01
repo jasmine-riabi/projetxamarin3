@@ -29,6 +29,7 @@ namespace projet
             carousel.Children.Add(new Page5());
             carousel.Children.Add(new Page6());
 
+         
 
            // MainPage = new MainPage();
            MainPage = tabbedPage;

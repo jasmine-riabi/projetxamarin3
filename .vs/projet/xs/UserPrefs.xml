@@ -1,14 +1,27 @@
 ﻿<Properties StartupConfiguration="{03F389B2-70AB-4741-9907-339B62FB8D0E}|Default">
   <MonoDevelop.Ide.ItemProperties.projet.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.811D6803-1E36-4287-AA1F-C193FE62FD2F" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="projet/App.xaml.cs">
+    <Files>
+      <File FileName="projet/Views/Europe.xaml" Line="32" Column="16" />
+      <File FileName="projet/Views/Afrique.xaml" />
+      <File FileName="projet/Views/Amerique.xaml" />
+      <File FileName="projet/Views/Antarctique.xaml" />
+      <File FileName="projet/Views/Asie.xaml" />
+      <File FileName="projet/Views/CountryPage.xaml" />
+      <File FileName="projet/Views/Oceanie.xaml" />
+      <File FileName="projet/App.xaml.cs" Line="32" Column="10" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="projet" expanded="True">
             <Node name="projet" expanded="True">
-              <Node name="Service" expanded="True" />
-              <Node name="Views" selected="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="App.xaml" expanded="True">
+                <Node name="App.xaml.cs" selected="True" />
+              </Node>
             </Node>
+            <Node name="projet.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
