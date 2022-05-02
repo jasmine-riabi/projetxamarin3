@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="projet.Views.RoundedImage"
+    xmlns:local="clr-namespace:projet.Views;assembly=projet">
+
+    <ContentView.Content>
+        <Frame Margin="20" x:Name="frame" BackgroundColor="LightGray" CornerRadius="{Binding Size}"  HeightRequest="{Binding Size}" WidthRequest="{Binding Size}" HorizontalOptions="Center" Padding="0" IsClippedToBounds="True" >
+            <Image x:Name="image" HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Frame>
+    </ContentView.Content>
+
+</ContentView>
