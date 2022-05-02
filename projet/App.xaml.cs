@@ -30,9 +30,8 @@ namespace projet
             carousel.Children.Add(new Page6());
 
 
-
-            // MainPage = new MainPage();
-            MainPage = new NavigationPage(tabbedPage);
+           // MainPage = new MainPage();
+           MainPage = tabbedPage;
         }
 
         protected override void OnStart()

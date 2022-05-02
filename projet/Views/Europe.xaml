@@ -6,8 +6,7 @@
              Title="Europe"
              Icon="icon.png">
 
-    <ListView
-        BackgroundColor="LightGray"
+    <ListView 
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand"
         ItemsSource="{Binding Countries}"
@@ -17,13 +16,13 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout>
-                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                            <Image Source="{Binding Flags.Png}" VerticalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
-                            <Label Text="{Binding Name.Common}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="Start">
-                            <CheckBox VerticalOptions="StartAndExpand"/>
-                        </StackLayout>
+
+
+                        <Frame CornerRadius="50" BackgroundColor="Black" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" VerticalOptions="Center" IsClippedToBounds="True" Margin="20" Padding="0">
+                            <Image Source="{Binding Flags.Png.AbsoluteUri}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
+                        </Frame>
+                        <Label Text="{Binding Name.Common}" HorizontalOptions="Center"/>
+                        <Image IsVisible="{Binding IsFavourite}" Source="favourite.png" HeightRequest="16" HorizontalOptions="End" Margin="20"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

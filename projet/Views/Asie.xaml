@@ -5,28 +5,46 @@
              x:Class="projet.Views.Page4"
              Title="Asie"
              Icon="icon.png">
-   <ListView
-        BackgroundColor="LightGray"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        ItemsSource="{Binding Countries}"
-        SelectedItem="{Binding CountrySelected, Mode=TwoWay}"
-        HasUnevenRows="True">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout>
-                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-                            <Image Source="{Binding Flags.Png}" VerticalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
-                            <Label Text="{Binding Name.Common}" VerticalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                        <StackLayout HorizontalOptions="EndAndExpand" VerticalOptions="Start">
-                            <CheckBox VerticalOptions="StartAndExpand"/>
-                        </StackLayout>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               IsEnabled="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                               Color="Green"/>
 
-    </ListView>
+            <CollectionView ItemsSource="{Binding Countries}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Label Grid.Column="1"
+                                   Text="{Binding Name.Common}"
+                                   FontSize="10"
+                                   FontAttributes="Bold"
+                                   VerticalTextAlignment="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="Blue"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
