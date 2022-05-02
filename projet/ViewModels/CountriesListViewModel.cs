@@ -39,7 +39,7 @@ namespace projet.ViewModels
                 {
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        await Application.Current.MainPage.Navigation.PushModalAsync(new CountryPage(value));
+                        await Application.Current.MainPage.Navigation.PushAsync(new CountryPage(value));
                         CountrySelected = null;
                     });
                 }
