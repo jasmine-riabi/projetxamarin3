@@ -1,43 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:projet.Views"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="projet.Views.CountryPage">
 
-    
-    <StackLayout >
-        
-        <StackLayout VerticalOptions="Start">
-            <local:RoundedImage Image="{Binding Flags}"  VerticalOptions="Start" HorizontalOptions="Center" s="100" />
-            <Label Text="{Binding Name}" FontSize="Title" HorizontalOptions="Center" TextColor="Black"/>
-        </StackLayout>
-
-        <FlexLayout Direction="Row" Wrap="Wrap" Margin="10" JustifyContent="Start"  AlignContent="Start"  AlignItems="Start">
-            <Label Text="Capitale :  " FontSize="Title" HorizontalOptions="FillAndExpand"  TextColor="Black"/>
-            <Label Text="{Binding Capital}" FontSize="Title" HorizontalOptions="FillAndExpand" TextColor="Black"/>
-        </FlexLayout>
-
-        <BoxView BackgroundColor="Black" HeightRequest="0.7"  VerticalOptions="Fill"/>
-
-        <FlexLayout Direction="Row" Wrap="Wrap" Margin="5" JustifyContent="Start"  AlignContent="Start"  AlignItems="Start">
-            <Label Text="Population :  " FontSize="Title" TextColor="Black"/>
-            <Label Text="{Binding Population}" FontSize="Title"  TextColor="Black"/>
-        </FlexLayout>
-
-        <BoxView BackgroundColor="Black" HeightRequest="0.7"  VerticalOptions="Fill"/>
-
-        <FlexLayout Direction="Row" Wrap="Wrap" Margin="5" JustifyContent="Start"  AlignContent="Start"  AlignItems="Start">
-            <Label Text="Devise :  " FontSize="Title" TextColor="Black"/>
-            <Label Text="{Binding Currencies}" FontSize="Title"  TextColor="Black"/>
-        </FlexLayout>
-
-        <BoxView BackgroundColor="Black" HeightRequest="0.7"  VerticalOptions="Fill"/>
-        
-        <StackLayout VerticalOptions="EndAndExpand">
-            <Button Text ="wiki" Command="{Binding OnButtonClickedCommand}"/>
-        </StackLayout>
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">     
+         <Label Text="{Binding Name}" FontSize="Title" HorizontalOptions="Center" TextColor="Black"/>
     </StackLayout>
-    
-
 
 </ContentPage>
