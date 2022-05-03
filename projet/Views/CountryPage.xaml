@@ -4,8 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="projet.Views.CountryPage">
 
-    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">     
-         <Label Text="{Binding Name}" FontSize="Title" HorizontalOptions="Center" TextColor="Black"/>
-    </StackLayout>
+   <StackLayout BackgroundColor="LightGray" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">     
+            <Label x:Name="lab" Text="{Binding Name}" FontSize="Title" HorizontalOptions="Center" TextColor="Black"/>
+            <ImageButton Source="{Binding Flags}" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnTextToSpeechServiceClicked"/>
+   </StackLayout>
 
 </ContentPage>

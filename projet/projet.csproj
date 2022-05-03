@@ -21,11 +21,13 @@
     <None Remove="ViewModels\" />
     <None Remove="Service\" />
     <None Remove="Newtonsoft.Json" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Service\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\Europe.xaml.cs">

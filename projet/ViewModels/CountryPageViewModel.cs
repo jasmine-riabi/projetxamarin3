@@ -12,10 +12,18 @@ namespace projet.ViewModels
             set { SetProperty(ref name, value); }
         }
 
+        Uri flags;
+        public Uri Flags
+        {
+            get { return flags; }
+            set { SetProperty(ref flags, value); }
+        }
+
 
         public CountryPageViewModel(Country c)
         {
             Name = c.Name.Common;
+            Flags = c.Flags.Png;
         }
     }
 }
