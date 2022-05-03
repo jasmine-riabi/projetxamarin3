@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Input;
+using projet.Models;
 using projet.Service;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -60,6 +61,14 @@ namespace projet.ViewModels
             }
 
         }
+
+        public CountryPageViewModel(Countries c)
+        {
+            Name = c.Name;
+   /*         Capital = c.Capital[0];*/
+
+        }
+
 
         public ICommand OnButtonClickedCommand
         {

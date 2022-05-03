@@ -5,7 +5,11 @@
     x:Class="projet.Views.CountryPage">
     
     <StackLayout>
-        
+        <StackLayout HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0">
+            <Label TextColor="#8CA1A5" FontSize="22" HorizontalOptions="CenterAndExpand" Text="Vues"/>
+            <Label x:Name="nombreVue" TextColor="#8CA1A5" FontAttributes="Bold"  FontSize="22" HorizontalOptions="CenterAndExpand"/>
+
+        </StackLayout>
    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">     
             <Label x:Name="lab" Text="{Binding Name}" FontSize="Title" HorizontalOptions="Center" TextColor="Black"/>
             <local:RoundedImage Image="{Binding Flags}"  VerticalOptions="Start" HorizontalOptions="Center" s="100" />
@@ -16,7 +20,7 @@
 
         <FlexLayout Direction="Row" Wrap="Wrap" Margin="5" JustifyContent="Start"  AlignContent="Start"  AlignItems="Start">
         <Label Text="Capitale :  " FontSize="Title" HorizontalOptions="FillAndExpand"  TextColor="Black"/>
-        <Label Text="{Binding Capital}" FontSize="Title" HorizontalOptions="FillAndExpand" TextColor="Black"/>
+        <Label x:Name="capital" FontSize="Title" HorizontalOptions="FillAndExpand" TextColor="Black"/>
     </FlexLayout>
 
         <BoxView BackgroundColor="Black" HeightRequest="0.7"  VerticalOptions="Fill"/>

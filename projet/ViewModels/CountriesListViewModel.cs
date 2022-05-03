@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using projet.Models;
 using projet.Service;
 using projet.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace projet.ViewModels
@@ -13,6 +14,7 @@ namespace projet.ViewModels
     public class CountriesListViewModel : BaseViewModel
     {
         private bool isLoading;
+        public bool like;
 
         public bool IsLoading
         {
@@ -34,12 +36,20 @@ namespace projet.ViewModels
             get { return countrySelected; }
             set
             {
+                
                 SetProperty(ref countrySelected, value);
                 if (value != null)
                 {
+                    Countries countriesSelected = new Countries()
+                    {
+                        Like = false,
+                        NombreVue = 1,
+                        Name = value.Name.Common,
+                    };
+
                     Device.BeginInvokeOnMainThread(async () =>
                     {
-                        await Application.Current.MainPage.Navigation.PushAsync(new CountryPage(value));
+                        await Application.Current.MainPage.Navigation.PushAsync(new CountryPage(countriesSelected));
                         CountrySelected = null;
                     });
                 }
@@ -57,6 +67,19 @@ namespace projet.ViewModels
                 Countries = new ObservableCollection<Country>(tempCountries);
 
             IsLoading = false;
+
+            foreach (var t in Countries)
+            {
+                if (Preferences.ContainsKey(t.Name.ToString()))
+                {
+                    var myValue = Preferences.Get(t.Name.ToString(), true);
+                    t.Like = myValue;
+                }
+                else
+                {
+                    t.Like = false;
+                }
+            }
         }
 
         public async Task LoadCountriesAsia()
@@ -117,6 +140,11 @@ namespace projet.ViewModels
                 Countries = new ObservableCollection<Country>(tempCountries);
 
             IsLoading = false;
+        }
+
+        public bool Like {
+            get { return like; }
+            set { SetProperty(ref like, value); }
         }
     }
 }

@@ -12,6 +12,10 @@
         [JsonProperty("name")]
         public Name Name { get; set; }
 
+        public bool Like { get; set; }
+
+        public int NombreVue { get; set; }
+
         [JsonProperty("tld")]
         public string[] Tld { get; set; }
 
