@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="projet.MainPage" Title="Accueil" Icon="icon.png">
+             x:Class="projet.MainPage" Title="Accueil" Icon="icon.png"
+             BackgroundImageSource="https://s.tmimgcdn.com/scr/800x500/137600/cartoon-low-poly-earth-world-map-modele-3d_137618-original.jpg">
 
         <StackLayout VerticalOptions="Center">
             <Label HorizontalTextAlignment="Center" Text="The World" FontAttributes="Bold" FontSize="100" />

@@ -16,7 +16,7 @@ namespace projet.Droid
         {
             return Task.Run(() =>
             {
-                var ctx = MainActivity.Instance; // Forms.context useful for many Android SDK features
+                var ctx = Forms.Context; //  useful for many Android SDK features
                 toSpeak = text;
                 if (speaker == null)
                 {
